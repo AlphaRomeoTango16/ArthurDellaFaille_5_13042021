@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="../../css/style.css" />
     <title>Produits</title>
   </head>
 
@@ -23,13 +23,13 @@
                     <div id="navbarContent" class="collapse navbar-collapse">
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a class="nav-link" href="index.html">Accueil</a>
+                                <a class="nav-link" href="../index/index.html">Accueil</a>
                             </li>
                             <li class="nav-item active">
-                                <a class="nav-link" href="basket.html">Panier</a>
+                                <a class="nav-link" href="../basket/basket.html">Panier</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="order.html">Commande</a>
+                                <a class="nav-link" href="../order/order.html">Commande</a>
                             </li>
                         </ul>
                     </div>
@@ -81,21 +81,21 @@
                             <div class="form-row">
                                 <div class="form-group col-md-4">
                                     <label for="last_name">Nom</label>
-                                    <input class="form-control" id="last_name" placeholder="Exemple : Dupont"></input>
+                                    <input class="form-control" id="last_name" placeholder="Exemple : Dupont" required></input>
                                 </div>
                                 <div class="form-group col-md-4">
                                     <label for="first_name">Prénom</label>
-                                    <input class="form-control" id="first_name" placeholder="Exemple : Jean"></input>
+                                    <input class="form-control" id="first_name" placeholder="Exemple : Jean" required></input>
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group col-md-4">
                                     <label for="email">e-mail</label>
-                                    <input class="form-control" id="email" placeholder="Exemple : jean.dupont@gmail.com"></input>
+                                    <input class="form-control" id="email" placeholder="Exemple : jean.dupont@gmail.com" required></input>
                                 </div>
                                 <div class="form-group col-md-4">
                                     <label for="tel_number">Téléphone</label>
-                                    <input class="form-control" id="tel_number"></input>
+                                    <input class="form-control" id="tel_number" required></input>
                                 </div>
                             </div>
                         </form>
@@ -115,16 +115,16 @@
                         <form>
                             <div class="form-group">
                                 <label for="street">Rue / Avenue</label>
-                                <input class="form-control" id="street" placeholder="Exemple : 11 rue de Londres"></inout>
+                                <input class="form-control" id="street" placeholder="Exemple : 11 rue de Londres" required></inout>
                             </div>
                             <div class="form-row">
                                 <div class="form-group col-md-8">
                                     <label for="postal_code">Code postal</label>
-                                    <input class="form-control" id="postal_code" placeholder="Exemple : 75009"></input>
+                                    <input class="form-control" id="postal_code" placeholder="Exemple : 75009" required></input>
                                 </div>
                                 <div class="form-group col-md-4">
                                     <label for="city">Ville</label>
-                                    <input class="form-control" id="city" placeholder="Exemple : Paris"></input>
+                                    <input class="form-control" id="city" placeholder="Exemple : Paris" required></input>
                                 </div>
                             </div>
                         </form>
@@ -144,11 +144,11 @@
                             <div class="form-row">
                                 <div class="form-group col-md-4">
                                     <label for="card_name">Nom sur la carte</label>
-                                    <input class="form-control" id="card_name"></input>
+                                    <input class="form-control" id="card_name" required></input>
                                 </div>
                                 <div class="form-group col-md-4">
                                     <label for="card_number">Numéro de carte</label>
-                                    <input class="form-control" id="card_number"></input>
+                                    <input class="form-control" id="card_number" required></input>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -172,7 +172,7 @@
                                 <div class="form-group col-md-4">
                                     <label for="exp_date">Date d'expiration</label>
                                     <div class="form-inline">
-                                            <select class="form-control mr-2" id="exp_date">
+                                            <select class="form-control mr-2" id="exp_date" required>
                                             <option>01</option>
                                             <option>02</option>
                                             <option>03</option>
@@ -187,7 +187,7 @@
                                             <option>11</option>
                                             <option>12</option>
                                         </select>
-                                        <select class="form-control" id="exp_date">
+                                        <select class="form-control" id="exp_date" required>
                                             <option>2021</option>
                                             <option>2022</option>
                                             <option>2023</option>
@@ -199,7 +199,7 @@
                                 </div>
                                 <div class="form-group col-md-4">
                                     <label for="sec_code">Cryptogramme de sécurité</label>
-                                    <input class="form-control" id="sec_code" data-mdb-showcounter="true" maxlength="3" aria-describedby="secHelp"></input>
+                                    <input class="form-control" id="sec_code" data-mdb-showcounter="true" maxlength="3" aria-describedby="secHelp" required></input>
                                     <small id="secHelp" class="text-muted">
                                         3 derniers chiffres de votre carte, à droite de votre signature
                                     </small>
