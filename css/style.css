@@ -1,3 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;1,300&display=swap");
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%; }
+
 /*!
  * Bootstrap v4.6.0 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
@@ -295,7 +301,7 @@ template {
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
-  font-family: "Times New Roman", Times, serif;
+  font-family: "Open Sans", serif;
   font-weight: 500;
   line-height: 1.2;
   color: #284876; }

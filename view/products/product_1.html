@@ -11,11 +11,12 @@
   </head>
 
   <body>
+    <header>
     <div class="bg-dark mb-5">
         <div class="container">
             <div class="row">
                 <nav class="col navbar navbar-expand-lg navbar-dark">
-                    <a class="navbar-brand" href="index.html">Orinoco</a>
+                    <a class="navbar-brand" href="../index/index.html">Orinoco</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -36,22 +37,39 @@
             </div>
         </div>
     </div>
+    </header>
 
+    <content>
     <div class="container">
         <div class="row mb-3">
             <div class="col">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Ours en peluche faits à la main</h5>
-                        <a href="#" class="btn btn-primary">Ajouter au panier</a>
+                        <h5 class="card-title">Nom</h5>
+                        <p>Prix</p>
+                        <img src="#" width="40" height="30" alt="Ours en peluche">
+                        <p>Description</p>
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle mb-2" type="button" id="dropdownCustomization" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Couleurs
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownCustomization">
+                                <a class="dropdown-item" href="#">Bleu</a>
+                                <a class="dropdown-item" href="#">Rouge</a>
+                                <a class="dropdown-item" href="#">Vert</a>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-secondary">Ajouter au panier</a>
                         <a href="#" class="btn btn-primary">Acheter cet article</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    </content>
 
-    <div class="bg-light mt-5">
+    <footer>
+    <div class="bg-light mt-5 pt-3 pb-3">
         <div class="container">
             <div class="row">
                 <div class="col">
@@ -66,6 +84,7 @@
             </div>
         </div>
     </div>
+    </footer>
 
     <!-- Optional JavaScript -->
 
