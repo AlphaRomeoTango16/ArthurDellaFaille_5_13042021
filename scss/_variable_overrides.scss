@@ -4,6 +4,19 @@ $dark: #04040C;
 $headings-color: #284876;
 $card-bg: #FCFCFC;
 
+body {
+    background-color: #F3E8F0;
+}
+
+.bi-cart-fill::before {
+    color: #FFFF;
+    margin-right: 10px;
+}
+
+.navbar {
+    position: fixed;
+}
+
 footer {
     position: fixed;
     bottom: 0;
