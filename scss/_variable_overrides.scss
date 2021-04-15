@@ -3,22 +3,17 @@ $primary: #22A1ED;
 $dark: #04040C;
 $headings-color: #284876;
 $card-bg: #FCFCFC;
+$body-bg: #F3E8F0;
 
-body {
-    background-color: #F3E8F0;
+#logo {
+    width: 70%;
+}
+
+#footercolor {
+    background: linear-gradient(135deg, #E58909, #935DF0);
 }
 
 .bi-cart-fill::before {
     color: #FFFF;
     margin-right: 10px;
-}
-
-.navbar {
-    position: fixed;
-}
-
-footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
 }
