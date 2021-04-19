@@ -1,16 +1,16 @@
 /* Représentation du format d'un article ainsi que le formatage des données pour l'affichage
 */
 
-class Article{
-    constructor(jsonArticle){
-        jsonArticle && Object.assign(this, jsonArticle);
+class Furniture{
+    constructor(jsonFurniture){
+        jsonFurniture && Object.assign(this, jsonFurniture);
     }
 
-    getFormatedPrice(furnitures){
+    getFormatedPrice(furniture){
         let formatter = new Intl.NumberFormat('fr-FR', {
             style: 'currency',
             currency: 'EUR',
         });
-        return price.formatter();
+        let price = formatter.format(price);
     }
 }

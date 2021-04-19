@@ -1,18 +1,16 @@
 fetch("http://localhost:3000/api/furniture")
     .then(data => data.json())
-    .then( jsonListArticle => {
-        for(let jsonArticle of jsonListArticle){
-            let article = new Article(jsonArticle);
+    .then( jsonListFurniture => {
+        for(let jsonFurniture of jsonListFurniture){
+            let furniture = new Furniture(jsonFurniture);
             document.querySelector("#main_content").innerHTML += `<div class="row mb-3">
-                                                                    <div class="col-10 m-auto">
+                                                                    <div class="col-6 m-auto">
                                                                         <div class="card shadow">
                                                                                 <div class="card-header">
-                                                                                    <h5 class="card-title">${article.name}</h5>
+                                                                                    <h5 class="card-title">${furniture.name}</h5>
+                                                                                    <p>${furniture.getFormatedPrice}</p>
                                                                                 </div>
-                                                                                <img src="${article.imageUrl}" class="card-img-top">
-                                                                                <div class="card-body">
-                                                                                    <p>${article.price}</p>
-                                                                                </div>
+                                                                                    <img src="${furniture.imageUrl}" width="100%" height="200">
                                                                                 <a href="../products/product_1.html" class="btn btn-primary stretched-link">Sélectionner article</a>
                                                                             </div>
                                                                         </div>
