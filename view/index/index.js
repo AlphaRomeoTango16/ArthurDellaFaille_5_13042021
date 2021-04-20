@@ -1,4 +1,4 @@
-fetch("http://localhost:3000/api/furniture")
+furnitureManager.getAll()
     .then(data => data.json())
     .then( jsonListFurniture => {
         for(let jsonFurniture of jsonListFurniture){
@@ -8,10 +8,10 @@ fetch("http://localhost:3000/api/furniture")
                                                                         <div class="card shadow">
                                                                                 <div class="card-header">
                                                                                     <h5 class="card-title">${furniture.name}</h5>
-                                                                                    <p>${furniture.getFormatedPrice}</p>
+                                                                                    <p>${furniture.getFormatedPrice()}</p>
                                                                                 </div>
                                                                                     <img src="${furniture.imageUrl}" width="100%" height="200">
-                                                                                <a href="../products/product_1.html" class="btn btn-primary stretched-link">Sélectionner article</a>
+                                                                                <a href="../products/product.html?id=${furniture._id}" class="btn btn-primary stretched-link">Sélectionner article</a>
                                                                             </div>
                                                                         </div>
                                                                     </div>

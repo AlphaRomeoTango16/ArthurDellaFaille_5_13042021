@@ -6,9 +6,15 @@ class FurnitureManager{
         this.listFurniture = listFurniture;
     }
 
-    sort(){
-        this.listFurniture.sort((a,b)) => {
+    async getAll(){
+        var config = await loadConfig();
+        return fetch(config.host + config.data);
+    }
 
-        }
+    async getById(id){
+        var config = await loadConfig();
+        return fetch(config.host + config.data + "/"+id);
     }
 }
+
+var furnitureManager = new FurnitureManager();

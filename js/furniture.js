@@ -6,11 +6,7 @@ class Furniture{
         jsonFurniture && Object.assign(this, jsonFurniture);
     }
 
-    getFormatedPrice(furniture){
-        let formatter = new Intl.NumberFormat('fr-FR', {
-            style: 'currency',
-            currency: 'EUR',
-        });
-        let price = formatter.format(price);
+    getFormatedPrice(){
+        return (this.price/100).toFixed(2)+" €";
     }
 }

@@ -2,20 +2,20 @@
 */
 
 function addBasket(furnituresId){
-    let listBasket = getBasket();
-    listBasket.push(furnituresId);
-    saveBasket(listBasket);
+    let basket = getBasket();
+    basket.push(furnituresId);
+    saveBasket(basket);
 }
 
-fonction getBasket(){
-    let listBasket = localStorage.getItem("listBasket")
-    if(listBasket == null){
+function getBasket(){
+    let basket = localStorage.getItem("basket");
+    if(basket == null){
         return [];
     }else{
-        return JSON.parse(listBasket);
+        return JSON.parse(basket);
     }
 }
 
-function saveBasket(listBasket){
-    localStorage.setItem("listBasket", JSON.stringfy(listBasket));
+function saveBasket(basket){
+    localStorage.setItem("basket", JSON.stringfy(basket));
 }

@@ -1,7 +1,9 @@
-fetch("http://localhost:3000/api/furniture")
+var searchParam = (new URL(window.location)).searchParams;
+var id = searchParam.get("id");
+
+furnitureManager.getById(id)
     .then(data => data.json())
-    .then( jsonListFurniture => {
-        for(let jsonFurniture of jsonListFurniture){
+    .then( jsonFurniture => {
             let furniture = new Furniture(jsonFurniture);
             document.querySelector("#main_content").innerHTML += `<div class="row mb-3">
             <div class="col">
@@ -27,9 +29,8 @@ fetch("http://localhost:3000/api/furniture")
                 </div>
             </div>
         </div>`
-        }
-        document.querySelectorAll(".addBasket").forEach(btn-secondary =>{
-            btn-secondary.addEventListener("click", function(){
+        document.querySelectorAll(".addBasket").forEach(btn =>{
+            btn.addEventListener("click", function(){
                 addBasket(this.dataset.id);
                 this.setAttribute("class", "btn-secondary addBasket Activated")
             })
