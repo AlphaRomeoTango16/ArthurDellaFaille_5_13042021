@@ -27,5 +27,5 @@ function getBasketId(){
 }
 
 function saveBasket(basket){
-    localStorage.setItem("basket", JSON.stringfy(basket));
+    localStorage.setItem("basket",JSON.stringify(basket));
 }

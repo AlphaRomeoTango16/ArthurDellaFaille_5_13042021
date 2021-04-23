@@ -12,9 +12,9 @@ class Furniture{
 
     getCustomization(){
         if (this.varnish.value == "undefined") {
-            varnish.style.display = "none";
+            return varnish.style.display = "none";
         } else {
-            varnish.style.display = "inline";
+            return varnish.style.display = "inline";
         }
     }
 }
