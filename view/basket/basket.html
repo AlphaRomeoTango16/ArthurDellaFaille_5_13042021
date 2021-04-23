@@ -48,18 +48,15 @@
             </div>
         </div>
         <div class="row">
-            <div class="col mb-1">
-                <div id="basket_content" class="container">
-
-                </div>
-            </div>
-            <div class="col mb-1">
-                Prix unitaire
-            </div>
-        </div>
-        <div class="row">
             <div class="col">
-                <h3>Prix total</h3>
+                <table class="table">
+                    <thead>
+                        <tr><th>Article</th><th>Prix</th><th>Quantité</th></tr>
+                        <div id="basket_content"></div>
+                    </thead>
+                    <tbody id="cart-tablebody"></tbody>
+                </table>
+                <p>Sous total : <span class="subtotal"></span>€</p>
             </div>
         </div>
     </div>

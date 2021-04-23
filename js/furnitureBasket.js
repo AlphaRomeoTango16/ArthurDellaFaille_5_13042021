@@ -3,7 +3,7 @@
 
 function addBasket(furnituresId){
     let basket = getBasket();
-    basket.push(furnituresId);
+    basket.push({id: furnituresId});
     saveBasket(basket);
 }
 

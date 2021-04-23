@@ -10,7 +10,7 @@ class Furniture{
         return (this.price/100).toFixed(2)+" €";
     }
 
-    getCustomization(){
+    getVarnish(){
         if (this.varnish.value == "undefined") {
             return varnish.style.display = "none";
         } else {

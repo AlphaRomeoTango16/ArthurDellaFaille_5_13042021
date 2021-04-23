@@ -1,9 +1,11 @@
 $headings-font-family: "Open Sans", serif;
+$headings-font-weight: 600;
 $primary: #22A1ED;
 $dark: #04040C;
-$headings-color: #284876;
+$headings-color: #04040C;
 $card-bg: #FCFCFC;
 $body-bg: #F3E8F0;
+
 
 #logo {
     width: 70%;
@@ -18,6 +20,6 @@ $body-bg: #F3E8F0;
     margin-right: 10px;
 }
 
-.btn-secondary {
-    background-color: yellow;
+.btn .btn-secondary .addBasket {
+    background-color: black;
 }
