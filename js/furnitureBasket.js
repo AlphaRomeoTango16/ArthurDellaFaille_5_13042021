@@ -7,6 +7,12 @@ function addBasket(furnituresId){
     saveBasket(basket);
 }
 
+function removeBasket(furnituresId){
+    let basket = getBasket();
+    basket = basket.filter(basket => basket.id != furnituresId);
+    saveBasket(basket);
+}
+
 function getBasket(){
     let basket = localStorage.getItem("basket");
     if(basket == null){
@@ -14,6 +20,10 @@ function getBasket(){
     }else{
         return JSON.parse(basket);
     }
+}
+
+function getBasketId(){
+    return getBasket().map(basket => basket.id)
 }
 
 function saveBasket(basket){

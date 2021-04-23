@@ -1,16 +1,18 @@
-fetch("http://localhost:3000/api/furniture"
-    {
-        "method": "POST",
-        headers: {
-            'Content-Typer': 'application/json'
-        },
-        "body": JSON.stringify({ basket: getBasketId() })
-    })
-    .then(data => data.json())
-    .then( jsonListFurniture => {
-        for(let jsonFurniture of jsonListFurniture){
+var searchParam = (new URL(window.location)).searchParams;
+var id = searchParam.get("id");
+
+furnitureManager.getById(id),
+        {
+            "method": "POST",
+            headers: {
+                'Content-Type': 'application/json'
+                // 'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            "body": JSON.stringify({ basket: getBasketId() })
+        }.then(data => data.json())
+        .then( jsonFurniture => {
             let furniture = new Furniture(jsonFurniture);
-            document.querySelector("#basket_content").innerHTML += `<div class="row mb-3">
+                document.querySelector("#basket_content".innerHTML) += `<div class="row mb-3">
                                                                     <div class="col-6 m-auto">
                                                                         <div class="card shadow">
                                                                                 <div class="card-header">
@@ -23,5 +25,9 @@ fetch("http://localhost:3000/api/furniture"
                                                                         </div>
                                                                     </div>
                                                                 </div>`
-        }
-    });
+;
+            }
+
+
+        });
+;
