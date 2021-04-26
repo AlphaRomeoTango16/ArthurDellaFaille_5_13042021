@@ -1,15 +1,15 @@
 /* Gestion du panier, enregistrement d'un produits dans le panier, retrait d'un article dans le panier.
 */
 
-function addBasket(furnituresId){
+function addBasket(furniture){
     let basket = getBasket();
-    basket.push({id: furnituresId});
-    saveBasket(basket);
-}
-
-function removeBasket(furnituresId){
-    let basket = getBasket();
-    basket = basket.filter(basket => basket.id != furnituresId);
+    let productFound = basket.find(product => product.id == furniture.id);
+    if (productFound != undefined) {
+        productFound.quantity++;
+    }else {
+        furniture.quantity = 1;
+        basket.push(furniture);
+    }
     saveBasket(basket);
 }
 

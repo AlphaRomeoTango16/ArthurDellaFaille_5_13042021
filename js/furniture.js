@@ -9,12 +9,4 @@ class Furniture{
     getFormatedPrice(){
         return (this.price/100).toFixed(2)+" €";
     }
-
-    getVarnish(){
-        if (this.varnish.value == "undefined") {
-            return varnish.style.display = "none";
-        } else {
-            return varnish.style.display = "inline";
-        }
-    }
 }
