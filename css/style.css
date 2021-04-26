@@ -20,6 +20,9 @@
 #remove {
   border-radius: 0px 10px 10px 0px; }
 
+.table th {
+  vertical-align: unset; }
+
 /*!
  * Bootstrap v4.6.0 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
