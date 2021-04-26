@@ -10,8 +10,8 @@ var basket = getBasket();
                                                                                 <tr><th>${furniture.name}</th>
                                                                                 <th>${furniture.getFormatedPrice()}</th>
                                                                                 <th>${furniture.quantity}
-                                                                                    <button type="button" class="btn btn-primary ml-3">+</button>
-                                                                                    <button type="button" class="btn btn-primary ml-3">-</button>
+                                                                                    <button type="button" class="btn btn-primary" id="add">+</button>
+                                                                                    <button type="button" class="btn btn-primary" id="remove">-</button>
                                                                                 </th>
                                                                                 <th>
                                                                                 </tr>

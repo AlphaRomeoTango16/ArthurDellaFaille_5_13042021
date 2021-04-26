@@ -23,3 +23,11 @@ $body-bg: #F3E8F0;
 .btn .btn-secondary .addBasket {
     background-color: black;
 }
+
+#add {
+    border-radius: 10px 0px 0px 10px;
+}
+
+#remove {
+    border-radius: 0px 10px 10px 0px;
+}
