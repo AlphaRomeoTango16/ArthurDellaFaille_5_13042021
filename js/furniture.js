@@ -9,4 +9,8 @@ class Furniture{
     getFormatedPrice(){
         return (this.price/100).toFixed(2)+" €";
     }
+
+    getTotalPrice(){
+        return ((this.price/100)*(this.quantity)).toFixed(2)+" €";
+    }
 }

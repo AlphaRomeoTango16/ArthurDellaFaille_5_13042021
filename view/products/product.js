@@ -35,6 +35,5 @@ furnitureManager.getById(id)
         </div>`;
         document.querySelector(".addBasket").addEventListener("click", function() {
                     addBasket(furniture);
-                    addBasket(furniture.varnish);
             })
     });

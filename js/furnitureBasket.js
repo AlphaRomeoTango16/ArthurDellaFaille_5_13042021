@@ -3,7 +3,7 @@
 
 function addBasket(furniture){
     let basket = getBasket();
-    let productFound = basket.find(product => product.id == furniture.id);
+    let productFound = basket.find(product => product._id == furniture._id);
     if (productFound != undefined) {
         productFound.quantity++;
     }else {
@@ -11,6 +11,15 @@ function addBasket(furniture){
         basket.push(furniture);
     }
     saveBasket(basket);
+}
+
+function addQt(furniture){
+    let basket = getBasket();
+    return furniture.quantity++;
+}
+
+function totalPrice(){
+    return (getFormatedPrice*quantity);
 }
 
 function getBasket(){
