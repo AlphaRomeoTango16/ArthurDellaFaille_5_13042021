@@ -18,10 +18,6 @@ function addQt(furniture){
     return furniture.quantity++;
 }
 
-function totalPrice(){
-    return (getFormatedPrice*quantity);
-}
-
 function getBasket(){
     let basket = localStorage.getItem("basket");
     if(basket == null){
