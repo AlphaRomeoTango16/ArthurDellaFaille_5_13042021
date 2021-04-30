@@ -13,9 +13,10 @@ function addBasket(furniture){
     saveBasket(basket);
 }
 
-function addQt(furniture){
-    let basket = getBasket();
-    return furniture.quantity++;
+function increment(incrementor, target){
+    var value = ParseInt(document.getElementByClass(target).value);
+    value+=incrementor;
+    document.getElementByClass(target).value = value;
 }
 
 function getBasket(){
