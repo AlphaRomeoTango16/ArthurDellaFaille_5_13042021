@@ -40,7 +40,7 @@ $body-bg: #F3E8F0;
     vertical-align: unset;
 }
 
-.counter {
+.counter{
     width: 10%;
     text-align: center;
     border: 0;
@@ -48,4 +48,16 @@ $body-bg: #F3E8F0;
 
 input:disabled{
     background-color: white;
+}
+
+.bi-x:hover{
+    color: $primary;
+}
+
+.bi-dash-circle-fill:hover{
+    color: $primary;
+}
+
+.bi-plus-circle-fill:hover{
+    color: $primary;
 }

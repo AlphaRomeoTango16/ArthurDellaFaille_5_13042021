@@ -13,11 +13,22 @@ function addBasket(furniture){
     saveBasket(basket);
 }
 
-function increment(incrementor, target){
-    var value = ParseInt(document.getElementByClass(target).value);
-    value+=incrementor;
-    document.getElementByClass(target).value = value;
+function remove(furniture){
+    let basket = getBasket();
 }
+
+function increase(){
+    let basket = getBasket();
+    let productQuantity = basket.find(quantity => furniture.quantity);
+    productQuantity.quantity++;
+}
+
+function decrease(furniture){
+    let basket = getBasket();
+    let productQuantity = basket.find(quantity => furniture.quantity);
+    productQuantity.quantity--;
+}
+
 
 function getBasket(){
     let basket = localStorage.getItem("basket");
