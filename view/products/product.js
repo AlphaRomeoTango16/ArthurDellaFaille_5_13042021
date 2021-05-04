@@ -21,8 +21,8 @@ furnitureManager.getById(id)
                         <p class="ml-3">${furniture.description}</p>
                     </div>
                     <div class="d-flex justify-content-between pb-3 pl-3 pr-3">
-                            <select class="form-select">
-                                <option selected>Choisissez une option</option>
+                            <select class="form-select" id="customisation" required>
+                                <option selected disabled value="">Choisissez une option</option>
                                 ${option}
                             </select>
                         <div>
@@ -34,6 +34,10 @@ furnitureManager.getById(id)
             </div>
         </div>`;
         document.querySelector(".addBasket").addEventListener("click", function() {
-                    addBasket(furniture);
+                    let custom = document.querySelector("#customisation");
+                    if (custom.reportValidity()){
+                        furniture.customisation = document.querySelector("#customisation").value;
+                        addBasket(furniture);
+                    }
             })
     });

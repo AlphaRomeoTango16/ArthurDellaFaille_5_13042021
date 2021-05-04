@@ -3,30 +3,38 @@
 
 function addBasket(furniture){
     let basket = getBasket();
-    let productFound = basket.find(product => product._id == furniture._id);
+    let productFound = basket.find(product => product._id == furniture._id && product.customisation == furniture.customisation);
     if (productFound != undefined) {
         productFound.quantity++;
     }else {
         furniture.quantity = 1;
         basket.push(furniture);
+        productFound = furniture;
     }
     saveBasket(basket);
+    return productFound;
 }
 
 function remove(furniture){
     let basket = getBasket();
-}
-
-function increase(){
-    let basket = getBasket();
-    let productQuantity = basket.find(quantity => furniture.quantity);
-    productQuantity.quantity++;
+    basket = basket.filter(product => product._id != furniture._id || product.customisation != furniture.customisation);
+    saveBasket(basket);
 }
 
 function decrease(furniture){
     let basket = getBasket();
     let productQuantity = basket.find(quantity => furniture.quantity);
     productQuantity.quantity--;
+}
+
+function getTotalAmount(){
+    let basket = getBasket();
+    var total = 0;
+    basket.forEach(product => {
+        let furniture = new Furniture(product);
+        total += furniture.getTotalPrice();
+    });
+    return total;
 }
 
 

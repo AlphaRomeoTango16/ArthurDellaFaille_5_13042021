@@ -11,6 +11,6 @@ class Furniture{
     }
 
     getTotalPrice(){
-        return ((this.price/100)*(this.quantity)).toFixed(2)+" €";
+        return (this.price/100)*(this.quantity);
     }
 }
