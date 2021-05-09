@@ -37,11 +37,21 @@ var basket = getBasket();
                 showTotal();
             })
         })
-        /*
-        document.querySelectorAll(".dec").addEventListener("click", function (){
-            decrease(furniture);
+    
+        document.querySelectorAll(".dec").forEach(btn => {
+            btn.addEventListener("click", function (){
+                let basketLine =this.closest(".basket-line");
+                let product = decrease({
+                    _id:basketLine.dataset.id,
+                    customisation:basketLine.dataset.customisation
+                });
+                let furniture = new Furniture(product);
+                basketLine.querySelector(".counter").value = furniture.quantity;
+                basketLine.querySelector(".total-price").innerHTML = furniture.getTotalPrice().toFixed(2)+" €";
+                showTotal();
+            })
         })
-        */
+
         document.querySelectorAll(".inc").forEach(btn => {
                 btn.addEventListener("click", function (){
                     let basketLine = this.closest(".basket-line");
@@ -57,6 +67,6 @@ var basket = getBasket();
         })
     
     function showTotal(){
-        document.querySelector("#total-basket").innerHTML = getTotalAmount();
+        document.querySelector("#total-basket").innerHTML = getTotalAmount().toFixed(2)+" €";
     }
     showTotal();

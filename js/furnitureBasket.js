@@ -23,8 +23,10 @@ function remove(furniture){
 
 function decrease(furniture){
     let basket = getBasket();
-    let productQuantity = basket.find(quantity => furniture.quantity);
-    productQuantity.quantity--;
+    let productFound = basket.find(product => product._id == furniture._id && product.customisation == furniture.customisation);
+    productFound.quantity--;
+    saveBasket(basket);
+    return productFound;
 }
 
 function getTotalAmount(){
