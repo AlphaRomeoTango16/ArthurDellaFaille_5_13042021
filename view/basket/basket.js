@@ -70,3 +70,16 @@ var basket = getBasket();
         document.querySelector("#total-basket").innerHTML = getTotalAmount().toFixed(2)+" €";
     }
     showTotal();
+
+    document.querySelector(".takeOrders").addEventListener("click", function() {
+        var valid = true;
+        for(let input of document.querySelectorAll(".form input")){
+            valid &= input.reportValidity();
+            if(!valid){
+                break;
+            }
+        }
+        if(valid){
+            alert("Votre commande a bien été passé.")
+        }
+    })

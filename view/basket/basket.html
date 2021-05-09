@@ -106,10 +106,6 @@
                                     <label for="email">e-mail</label>
                                     <input class="form-control" id="email" placeholder="Exemple : jean.dupont@gmail.com" required></input>
                                 </div>
-                                <div class="form-group col-md-4">
-                                    <label for="tel_number">Téléphone</label>
-                                    <input class="form-control" id="tel_number" required></input>
-                                </div>
                             </div>
                         </form>
                         </div>
@@ -127,14 +123,10 @@
                     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
                         <div class="card p-3">
                         <form>
-                            <div class="form-group">
-                                <label for="street">Rue / Avenue</label>
-                                <input class="form-control" id="street" placeholder="Exemple : 11 rue de Londres" required></inout>
-                            </div>
                             <div class="form-row">
                                 <div class="form-group col-md-8">
-                                    <label for="postal_code">Code postal</label>
-                                    <input class="form-control" id="postal_code" placeholder="Exemple : 75009" required></input>
+                                    <label for="adress">Adresse</label>
+                                    <input class="form-control" id="street" placeholder="Exemple : 11 rue de Londres" required></input>
                                 </div>
                                 <div class="form-group col-md-4">
                                     <label for="city">Ville</label>
@@ -144,95 +136,12 @@
                         </form>
                         </div>
                     </div>
-                <div class="card">
-                    <div class="card-header" id="headingTwo">
-                        <h5 class="mb-0">
-                            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseTwo">
-                                Paiement
-                                <i class="bi bi-chevron-down"></i>
-                            </button>
-                        </h5>
-                    </div>
-                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-                        <div class="card p-3">
-                        <form>
-                            <div class="form-row">
-                                <div class="form-group col-md-4">
-                                    <label for="card_name">Nom sur la carte</label>
-                                    <input class="form-control" id="card_name" required></input>
-                                </div>
-                                <div class="form-group col-md-4">
-                                    <label for="card_number">Numéro de carte</label>
-                                    <input class="form-control" id="card_number" required></input>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <legend class="col-form-label">Type de paiement</legend>
-                                <div class="col">
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="cb" id="cb" value="option1" checked>
-                                        <label class="form-check-label" for="cb">CB</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="visa" id="visa" value="option1">
-                                        <label class="form-check-label" for="cb">VISA</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="masterclass" id="masterclass" value="option1">
-                                        <label class="form-check-label" for="cb">MASTERCLASS</label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group col-md-4">
-                                    <label for="exp_date">Date d'expiration</label>
-                                    <div class="form-inline">
-                                            <select class="form-control mr-2" id="exp_date" required>
-                                            <option>01</option>
-                                            <option>02</option>
-                                            <option>03</option>
-                                            <option>04</option>
-                                            <option>05</option>
-                                            <option>05</option>
-                                            <option>06</option>
-                                            <option>07</option>
-                                            <option>08</option>
-                                            <option>09</option>
-                                            <option>10</option>
-                                            <option>11</option>
-                                            <option>12</option>
-                                        </select>
-                                        <select class="form-control" id="exp_date" required>
-                                            <option>2021</option>
-                                            <option>2022</option>
-                                            <option>2023</option>
-                                            <option>2024</option>
-                                            <option>2025</option>
-                                            <option>2026</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="form-group col-md-4">
-                                    <label for="sec_code">Cryptogramme de sécurité</label>
-                                    <input class="form-control" id="sec_code" data-mdb-showcounter="true" maxlength="3" aria-describedby="secHelp" required></input>
-                                    <small id="secHelp" class="text-muted">
-                                        3 derniers chiffres de votre carte, à droite de votre signature
-                                    </small>
-                                </div>
-                            </div>
-                        </form>
-                        </div>
-                    </div>
-                </div>
             </div>
             </div>
             </div>
             <div class="row justify-content-center mb-5">
                 <div class="col-auto">
-                    <button type="submit" class="btn btn-danger p-3 m-3">Annuler commande</button>
-                </div>
-                <div class="col-auto">
-                    <button type="submit" class="btn btn-success p-3 m-3">Passer commande</button>
+                    <button type="submit" class="btn btn-success p-3 m-3 takeOrders">Passer commande</button>
                 </div>
             </div>
         </div>
