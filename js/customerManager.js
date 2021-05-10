@@ -17,15 +17,11 @@ function saveContact(contact){
 
 function addContact(){
     let contact = getContact();
+    let customer = new Customer(firstName, lastName, email, adress, city);
     let firstName = document.getElementById("first_name").value;
-    contact.push(firstName);
     let lastName = document.getElementById("last_name").value;
-    contact.push(lastName);
     let email = document.getElementById("email").value;
-    contact.push(email);
     let adress = document.getElementById("adress").value;
-    contact.push(adress);
     let city = document.getElementById("city").value;
-    contact.push(city);
     saveContact(contact);
     }

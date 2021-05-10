@@ -73,7 +73,7 @@ var basket = getBasket();
 
     document.querySelector(".takeOrders").addEventListener("click", function() {
         var valid = true;
-        for(let input of document.querySelectorAll(".form input")){
+        for(let input of document.querySelectorAll(".form-control")){
             valid &= input.reportValidity();
             if(!valid){
                 break;
@@ -82,4 +82,5 @@ var basket = getBasket();
         if(valid){
             alert("Votre commande a bien été passé.")
         }
+        addContact();
     })
