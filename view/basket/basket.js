@@ -81,6 +81,7 @@ var basket = getBasket();
         }
         if(valid){
             alert("Votre commande a bien été passé.")
+            addContact();
+            location.href = "../order/order.html";
         }
-        addContact();
     })
