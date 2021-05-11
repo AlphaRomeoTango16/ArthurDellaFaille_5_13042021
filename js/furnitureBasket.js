@@ -24,9 +24,17 @@ function remove(furniture){
 function decrease(furniture){
     let basket = getBasket();
     let productFound = basket.find(product => product._id == furniture._id && product.customisation == furniture.customisation);
-    productFound.quantity--;
-    saveBasket(basket);
-    return productFound;
+    if(productFound == undefined){
+        alert("Attention ce produit n'est pas dans le panier !")
+    }else{
+        if(productFound.quantity > 1){
+            productFound.quantity--;
+            saveBasket(basket);
+        }else{
+            remove(furniture);
+        }
+        return productFound;
+    }
 }
 
 function getTotalAmount(){
@@ -50,7 +58,7 @@ function getBasket(){
 }
 
 function getBasketId(){
-    return getBasket().map(basket => basket.id)
+    return getBasket().map(product => product._id)
 }
 
 function saveBasket(basket){

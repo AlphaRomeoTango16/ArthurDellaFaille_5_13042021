@@ -81,7 +81,17 @@ var basket = getBasket();
         }
         if(valid){
             alert("Votre commande a bien été passé.")
-            addContact();
-            location.href = "../order/order.html";
+            let contact = {
+                firstName : document.getElementById("first_name").value,
+                lastName : document.getElementById("last_name").value,
+                email : document.getElementById("email").value,
+                address : document.getElementById("adress").value,
+                city : document.getElementById("city").value
+            }
+            furnitureManager.postBasket(contact, getBasketId())
+            .then(data => data.json())
+            .then(order => {
+                location.assign(`../order/order.html?orderId=${order.orderId}`);
+            })
         }
     })
