@@ -26,7 +26,7 @@ furnitureManager.getById(id)
                                 ${option}
                             </select>
                         <div>
-                            <a href="#" class="btn btn-secondary addBasket">Ajouter au panier</a>
+                            <a href="../basket/basket.html" class="btn btn-secondary addBasket">Ajouter au panier</a>
                         </div>
                     </div>
                     </div>

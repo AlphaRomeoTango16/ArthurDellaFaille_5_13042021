@@ -1,4 +1,4 @@
-/* Gestion des articles en objet, gère le tri par nom.
+/* Gestion des articles en objet.
 */
 
 class FurnitureManager{
